@@ -19,6 +19,10 @@ import { ViewsIconComponent } from './components/videos/video-card/views-icon/vi
 import { CommentsIconComponent } from './components/videos/video-card/comments-icon/comments-icon.component';
 import { CountFormatPipe } from './pipes/count-format.pipe';
 import { CardColorDirective } from './directives/card-color.directive';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { DetailsPageComponent } from './components/details-page/details-page.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { CardColorDirective } from './directives/card-color.directive';
     ViewsIconComponent,
     CommentsIconComponent,
     CountFormatPipe,
-    CardColorDirective
+    CardColorDirective,
+    LoginPageComponent,
+    MainPageComponent,
+    NotFoundPageComponent,
+    DetailsPageComponent
   ],
   imports: [
     BrowserModule,

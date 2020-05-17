@@ -1,0 +1,13 @@
+<form class="form" (submit)="handleSubmit($event)">
+  <h1>Login</h1>
+  <p class="error" *ngIf="error">{{error}}</p>
+  <fieldset>
+    <legend>Login</legend>
+    <input name="login" [(ngModel)]="login">
+  </fieldset>
+  <fieldset>
+    <legend>Password</legend>
+    <input name="password" [(ngModel)]="password" type="password">
+  </fieldset>
+  <button class="button" type="submit">login</button>
+</form>

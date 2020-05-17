@@ -1,0 +1,25 @@
+@import "../../../variables.scss";
+
+.form {
+  background-color: $background-gray;
+  width: 350px;
+  min-height: 250px;
+  margin: 50px auto 0;
+  padding: 28px 20px;
+}
+
+.button {
+  background-color: $blue;
+  padding: 6px 25px;
+  border-radius: 4px;
+  color: white;
+  border: 0;
+  align-self: center;
+  cursor: pointer;
+  margin: 20px 0 0 auto;
+  display: block;
+}
+
+.error {
+  color: red;
+}
