@@ -6,9 +6,13 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/header/search/search.component';
 import { SortingComponent } from './components/header/sorting/sorting.component';
-import { UserButtonComponent } from './components/header/user-button/user-button.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VideoCardComponent } from './components/videos/video-card/video-card.component';
+import { AuthWidgetComponent } from './components/header/auth-widget/auth-widget.component';
+import { LogoComponent } from './components/header/logo/logo.component';
+import { LoginIconComponent } from './components/header/auth-widget/login-icon/login-icon.component';
+import { ToggleSortComponent } from './components/header/toggle-sort/toggle-sort.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +20,17 @@ import { VideoCardComponent } from './components/videos/video-card/video-card.co
     HeaderComponent,
     SearchComponent,
     SortingComponent,
-    UserButtonComponent,
     VideosComponent,
-    VideoCardComponent
+    VideoCardComponent,
+    AuthWidgetComponent,
+    LogoComponent,
+    LoginIconComponent,
+    ToggleSortComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,12 @@
-<p>search works!</p>
+<form class="form" (submit)="handleSearch($event)">
+  <input
+    class="input"
+    [(ngModel)]="search"
+    [ngModelOptions]="{standalone: true}"
+    name="search"
+    placeholder="input search"
+  >
+  <button class="button" type="submit">
+    search
+  </button>
+</form>

@@ -1,1 +1,9 @@
-<p>header works!</p>
+<div class="search-wrapper">
+  <app-logo></app-logo>
+  <app-search></app-search>
+  <app-toggle-sort (toggle)="toggleSort()"></app-toggle-sort>
+</div>
+
+<div *ngIf="isSortShowing" class="sort-wrapper">
+  <app-sorting></app-sorting>
+</div>

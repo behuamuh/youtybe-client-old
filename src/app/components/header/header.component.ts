@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  isSortShowing = true;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSort() {
+    this.isSortShowing = !this.isSortShowing;
+    console.log('123');
   }
 
 }
