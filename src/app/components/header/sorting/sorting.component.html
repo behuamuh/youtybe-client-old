@@ -1,1 +1,7 @@
-<p>sorting works!</p>
+<span>Sorting by:</span>
+<div class="buttons">
+  <span class="button" (click)="handleSort('date')">date</span>
+  <span class="button" (click)="handleSort('views')">count of views</span>
+  <span class="button" (click)="handleFilter()">by word or sentance</span>
+</div>
+<input [(ngModel)]='filter'>

@@ -1,0 +1,21 @@
+@import "../../../../variables.scss";
+
+:host {
+  color: $text;
+  display: flex;
+}
+
+.button {
+  color: $blue;
+  margin-right: 21px;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  margin: 0 10px;
+}

@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
 
   handleSearch(event: KeyboardEvent | MouseEvent) {
     event.preventDefault();
-    console.log(this.search);
+    console.log('Search:', this.search);
     this.search = '';
   }
 

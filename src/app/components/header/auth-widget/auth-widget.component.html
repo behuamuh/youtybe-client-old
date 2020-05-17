@@ -1,1 +1,6 @@
-<p>auth-widget works!</p>
+<div class="widget" (click)="handleClick()">
+  <span class="title">
+    {{isUserLoggedIn ? 'Logout' : 'Login'}}
+  </span>
+  <app-login-icon></app-login-icon>
+</div>
