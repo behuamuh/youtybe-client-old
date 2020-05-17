@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VideosService } from 'src/app/servises/videos.service';
 
 @Component({
   selector: 'app-search',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   search = '';
-  constructor() { }
+  constructor(private videosService: VideosService) { }
 
   ngOnInit(): void {
   }
 
   handleSearch(event: KeyboardEvent | MouseEvent) {
     event.preventDefault();
+    this.videosService.loadVideos();
     console.log('Search:', this.search);
     this.search = '';
   }

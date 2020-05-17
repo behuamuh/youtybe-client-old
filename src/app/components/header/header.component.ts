@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isSortShowing = true;
+  isSortShowing = false;
   constructor() { }
 
   ngOnInit(): void {
@@ -14,7 +14,6 @@ export class HeaderComponent implements OnInit {
 
   toggleSort() {
     this.isSortShowing = !this.isSortShowing;
-    console.log('123');
   }
 
 }

@@ -13,6 +13,12 @@ import { LogoComponent } from './components/header/logo/logo.component';
 import { LoginIconComponent } from './components/header/auth-widget/login-icon/login-icon.component';
 import { ToggleSortComponent } from './components/header/toggle-sort/toggle-sort.component';
 import { FormsModule } from '@angular/forms';
+import { LikeIconComponent } from './components/videos/video-card/like-icon/like-icon.component';
+import { DislikeIconComponent } from './components/videos/video-card/dislike-icon/dislike-icon.component';
+import { ViewsIconComponent } from './components/videos/video-card/views-icon/views-icon.component';
+import { CommentsIconComponent } from './components/videos/video-card/comments-icon/comments-icon.component';
+import { CountFormatPipe } from './pipes/count-format.pipe';
+import { CardColorDirective } from './directives/card-color.directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +31,13 @@ import { FormsModule } from '@angular/forms';
     AuthWidgetComponent,
     LogoComponent,
     LoginIconComponent,
-    ToggleSortComponent
+    ToggleSortComponent,
+    LikeIconComponent,
+    DislikeIconComponent,
+    ViewsIconComponent,
+    CommentsIconComponent,
+    CountFormatPipe,
+    CardColorDirective
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+:host {
+  padding: 24px;
+}
+
+.cards {
+  width: 1144px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 28px;
+  margin: 0 auto;
+}
