@@ -1,1 +1,15 @@
-<p>details-page works!</p>
+<div class="wrapper">
+  <a routerLink="/" class="back">
+    <app-back-icon></app-back-icon>
+  </a>
+  <img [src]="video?.snippet.thumbnails.high.url" alt="Image" class="image">
+  <div class="content" [appCardColor]="video?.snippet.publishedAt">
+    <div class="row">
+      <h3>{{video?.snippet.title}}</h3>
+      <p>{{video?.snippet.publishedAt | date}}</p>
+    </div>
+    <h4>Description</h4>
+    <p class="description">{{video?.snippet.description}}</p>
+    <app-video-actions [statistics]="video?.statistics"></app-video-actions>
+  </div>
+</div>

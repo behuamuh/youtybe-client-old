@@ -23,6 +23,8 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 import { DetailsPageComponent } from './components/details-page/details-page.component';
+import { VideoActionsComponent } from './components/videos/video-card/video-actions/video-actions.component';
+import { BackIconComponent } from './components/details-page/back-icon/back-icon.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { DetailsPageComponent } from './components/details-page/details-page.com
     LoginPageComponent,
     MainPageComponent,
     NotFoundPageComponent,
-    DetailsPageComponent
+    DetailsPageComponent,
+    VideoActionsComponent,
+    BackIconComponent
   ],
   imports: [
     BrowserModule,

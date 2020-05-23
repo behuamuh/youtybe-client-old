@@ -1,25 +1,8 @@
 <div class="card" [appCardColor]="video?.snippet.publishedAt">
   <div>
     <img [src]="video?.snippet.thumbnails.default.url" alt="image" class="image">
-    <div class="actions">
-      <div class="action">
-        <app-views-icon></app-views-icon>
-        <span class="count">{{video?.statistics.viewCount | countFormat}}</span>
-      </div>
-      <div class="action">
-        <app-like-icon></app-like-icon>
-        <span class="count">{{video?.statistics.likeCount | countFormat}}</span>
-      </div>
-      <div class="action">
-        <app-dislike-icon></app-dislike-icon>
-        <span class="count">{{video?.statistics.dislikeCount | countFormat}}</span>
-      </div>
-      <div class="action">
-        <app-comments-icon></app-comments-icon>
-        <span class="count">{{video?.statistics.commentCount | countFormat}}</span>
-      </div>
-    </div>
+    <app-video-actions [statistics]="video?.statistics"></app-video-actions>
     <p class="title">{{video?.snippet.title}}</p>
   </div>
-  <button class="button">...more</button>
+  <a [routerLink]="'details/' + video?.id" class="button">...more</a>
 </div>

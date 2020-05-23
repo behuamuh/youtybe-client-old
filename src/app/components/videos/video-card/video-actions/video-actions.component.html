@@ -1,0 +1,18 @@
+<div class="actions">
+  <div class="action">
+    <app-views-icon></app-views-icon>
+    <span class="count">{{statistics?.viewCount | countFormat}}</span>
+  </div>
+  <div class="action">
+    <app-like-icon></app-like-icon>
+    <span class="count">{{statistics?.likeCount | countFormat}}</span>
+  </div>
+  <div class="action">
+    <app-dislike-icon></app-dislike-icon>
+    <span class="count">{{statistics?.dislikeCount | countFormat}}</span>
+  </div>
+  <div class="action">
+    <app-comments-icon></app-comments-icon>
+    <span class="count">{{statistics?.commentCount | countFormat}}</span>
+  </div>
+</div>

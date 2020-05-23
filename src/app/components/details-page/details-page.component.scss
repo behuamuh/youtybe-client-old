@@ -1,0 +1,46 @@
+@import "../../../variables.scss";
+
+.wrapper {
+  margin: 44px auto 0;
+  width: 1200px;
+  height: 461px;
+  display: flex;
+}
+
+.back {
+  align-self: flex-start;
+}
+
+.image {
+  width: 729px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  background: $background-gray;
+  box-shadow: 5px 5px 20px rgba(51, 51, 51, 0.25);
+  border-radius: 0px 5px 5px 0px;
+  padding: 34px;
+  width: 436px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    flex-shrink: 0;
+  }
+}
+
+.description {
+  overflow: hidden;
+  padding-bottom: 20px;
+}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { VideosService } from 'src/app/servises/videos.service';
+import { Video } from 'src/app/models/video';
 
 @Component({
   selector: 'app-details-page',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private videosService: VideosService) { }
+  video: Video;
 
   ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.videosService.getVideos().subscribe(videos => {
+      this.video = videos.find(v => v.id === id);
+    });
+    console.log(this.video);
   }
 
 }

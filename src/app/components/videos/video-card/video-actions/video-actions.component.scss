@@ -1,0 +1,12 @@
+@import "../../../../../variables.scss";
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.count {
+  margin-left: 3px;
+  color: $text
+}
