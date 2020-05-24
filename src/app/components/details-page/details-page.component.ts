@@ -11,14 +11,13 @@ import { Video } from 'src/app/models/video';
 export class DetailsPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private videosService: VideosService) { }
-  video: Video;
+  video: Video<string>;
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.videosService.getVideos().subscribe(videos => {
       this.video = videos.find(v => v.id === id);
     });
-    console.log(this.video);
   }
 
 }

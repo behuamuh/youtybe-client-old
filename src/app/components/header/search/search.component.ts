@@ -1,23 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { VideosService } from 'src/app/servises/videos.service';
+import { fromEvent, Subscription } from 'rxjs';
+import { debounceTime, map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent implements OnInit {
-  search = '';
+export class SearchComponent implements AfterViewInit, OnDestroy {
   constructor(private videosService: VideosService) { }
 
-  ngOnInit(): void {
+  @ViewChild('input') search: ElementRef;
+  subscription: Subscription;
+
+  ngAfterViewInit(): void {
+    const search$ = fromEvent(this.search.nativeElement, 'keyup').pipe(
+      map((event: any) => event.target.value),
+      debounceTime(1000),
+    );
+
+    this.subscription = search$.subscribe(search => this.videosService.search(search));
   }
 
-  handleSearch(event: KeyboardEvent | MouseEvent) {
-    event.preventDefault();
-    this.videosService.loadVideos();
-    console.log('Search:', this.search);
-    this.search = '';
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
-
 }

@@ -1,12 +1,8 @@
-<form class="form" (submit)="handleSearch($event)">
+<form class="form">
   <input
     class="input"
-    [(ngModel)]="search"
-    [ngModelOptions]="{standalone: true}"
+    #input
     name="search"
     placeholder="input search"
   >
-  <button class="button" type="submit">
-    search
-  </button>
 </form>

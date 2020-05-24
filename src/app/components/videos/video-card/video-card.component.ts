@@ -7,7 +7,7 @@ import { Video } from 'src/app/models/video';
   styleUrls: ['./video-card.component.scss']
 })
 export class VideoCardComponent implements OnInit {
-  @Input() video?: Video;
+  @Input() video?: Video<string>;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SortingService } from 'src/app/servises/sorting.service';
 
 @Component({
   selector: 'app-sorting',
@@ -7,18 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SortingComponent implements OnInit {
   filter = '';
-  sortType = 'date';
-  constructor() { }
+  constructor(private sortingService: SortingService) { }
 
   ngOnInit(): void {
   }
 
   handleFilter() {
-    console.log('Filter:', this.filter);
+    this.sortingService.setFilterToken(this.filter);
   }
 
   handleSort(type: string) {
-    this.sortType = type;
-    console.log('Sort:', this.sortType);
+    this.sortingService.setSortType(type);
   }
 }

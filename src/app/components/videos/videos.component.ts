@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { VideosService } from 'src/app/servises/videos.service';
 import { Video } from 'src/app/models/video';
+import { SortingService } from 'src/app/servises/sorting.service';
 
 @Component({
   selector: 'app-videos',
@@ -8,12 +8,12 @@ import { Video } from 'src/app/models/video';
   styleUrls: ['./videos.component.scss']
 })
 export class VideosComponent implements OnInit {
-  videos: Video[];
-  constructor(private videosService: VideosService) {
+  videos: Video<string>[];
+  constructor(private sortingService: SortingService) {
   }
 
   ngOnInit(): void {
-    this.videosService.getVideos().subscribe(videos => this.videos = videos);
+    this.sortingService.getVideos().subscribe(videos => this.videos = videos);
   }
 
 }
